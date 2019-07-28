@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'metropolisbold';
+    src: url('fonts/metropolis-bold-webfont.woff2') format('woff2'),
+        url('fonts/metropolis-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'metropolisregular';
+    src: url('fonts/metropolis-regular-webfont.woff2') format('woff2'),
+        url('fonts/metropolis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+
+    .chat-stats-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 10px;
+        box-sizing: border-box;
+
+        h1 {
+            font-family: 'metropolisbold', Arial, Helvetica, sans-serif;
+            margin: 40px auto 0 auto;
+            color: transparent;
+            background: linear-gradient(to bottom right, rgb(31, 64, 55), rgb(100, 160, 180));
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        h2 {
+            font-family: 'metropolisregular', Arial, Helvetica, sans-serif;
+            margin: 10px auto 30px;
+            font-size: 1.1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        h3 {
+            font-family: 'metropolisregular', Helvetica, sans-serif;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        .file-btn-container {
+            margin: 20px auto;
+            position: relative;
+
+            #file {
+                width: 150px;
+                height: 40px;
+                opacity: 0;
+            }
+
+            .file-btn-label {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 150px;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 40px;
+                padding: auto;
+                box-shadow: 0 3px 6px rgba(137, 143, 226, 0.16), 0 3px 6px rgba(64, 74, 218, 0.23);
+                background-color: rgb(95, 103, 214);
+                background: linear-gradient(to bottom right, rgb(137, 143, 226), rgb(64, 74, 218));
+                color: #fff;
+                font-family: Arial, Helvetica, sans-serif;
+                user-select: none;
+                transition: box-shadow 200ms ease-in-out;
+
+                &:hover {
+                    box-shadow: 0 10px 20px rgba(137, 143, 226, 0.19), 0 6px 6px rgba(64, 74, 218, 0.23);
+                }
+
+                &:active {
+                    box-shadow: 0 1px 3px rgba(137, 143, 226, 0.12), 0 1px 2px rgba(64, 74, 218, 0.24);
+                }
+            }
+        }
+
+        .stats-canvas-container {
+            overflow: hidden;
+            display: none;
+
+            &.visible {
+                height: 600px;
+                display: block;
+            }
+        }
+    }
+}

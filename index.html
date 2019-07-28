@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WA-Stats</title>
+    <script src="bin/jquery-3.4.0.min.js"></script>
+    <script src="bin/whatsapp-chat-parser.min.js"></script>
+    <script src="bin/Chart.bundle.min.js"></script>
+    <script src="bin/jquery-deparam.min.js"></script>
+    <script src="bin/lz-string.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-stats-container">
+        <h1>Whatsapp Statistics</h1>
+        <h2>Analyzes your Whatsapp-Chat and creates some fancy charts.</h2>
+        <h3>Everything is done locally.</h3>
+        <h3>Nothing gets sent to any server.</h3>
+        <div class="file-btn-container">
+            <input type="file" name="" id="file" accept="application/txt, text/plain">
+            <label for="file" class="file-btn-label">Upload File</label>
+        </div>
+        <label for="shortUrlInput"></label>
+        <input type="text" name="shortUrlInput" id="shortUrlInput">
+        <div class="stats-canvas-container">
+            <canvas id="messages-count-chart" class="stats-canvas"></canvas>
+        </div>
+        <div class="stats-canvas-container">
+            <canvas id="most-used-words-chart" class="stats-canvas"></canvas>
+        </div>
+<div class="messages-show"></div>
+    </div>
+    <script src="charts.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
